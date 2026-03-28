@@ -1,0 +1,25 @@
+# NanoSplat Requirements
+# Install: pip install -r requirements.txt --break-system-packages
+#
+# Platform notes:
+#   Jetson Nano: CuPy + TensorRT come with JetPack — do NOT pip-install them
+#   RPi 4:       Pure CPU path via ONNX Runtime + Numba JIT
+#   x86 dev:     Everything works out of the box
+
+opencv-contrib-python-headless>=4.8.0
+ultralytics>=8.0.0
+onnxruntime>=1.16.0
+numpy>=1.24.0
+numba>=0.57.0
+
+# Optional — 3D viewing on x86 only (too large / no ARM wheel):
+# open3d>=0.17.0
+
+# Jetson-only (JetPack pre-installs, do NOT pip install):
+# cupy-cuda102   (JetPack 4.6 / CUDA 10.2)
+# cupy-cuda11x   (JetPack 5.x / CUDA 11)
+# tensorrt       (system package)
+# onnxruntime-gpu (replace onnxruntime above if CUDA ORT wheel available)
+
+# RPi camera (pre-installed on RPi OS Bookworm, uncomment for venv):
+# picamera2>=0.3.12
