@@ -6,7 +6,8 @@
 #   RPi 4:       Pure CPU path via ONNX Runtime + Numba JIT
 #   x86 dev:     Everything works out of the box
 
-opencv-contrib-python-headless>=4.8.0
+#opencv-contrib-python-headless>=4.8.0
+sudo apt install python3-opencv
 ultralytics>=8.0.0
 onnxruntime>=1.16.0
 numpy>=1.24.0
